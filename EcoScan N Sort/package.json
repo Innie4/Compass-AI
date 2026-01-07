@@ -1,0 +1,23 @@
+{
+  "name": "ecoscan-n-sort-monorepo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "EcoScan & Sort - AI-powered recycling scanner app with backend",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/frontend & npm run dev --workspace=packages/backend",
+    "dev:frontend": "npm run dev --workspace=packages/frontend",
+    "dev:backend": "npm run dev --workspace=packages/backend",
+    "build": "npm run build --workspace=packages/frontend && npm run build --workspace=packages/backend",
+    "build:frontend": "npm run build --workspace=packages/frontend",
+    "build:backend": "npm run build --workspace=packages/backend",
+    "test": "npm run test --workspaces",
+    "start": "npm run start --workspace=packages/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
